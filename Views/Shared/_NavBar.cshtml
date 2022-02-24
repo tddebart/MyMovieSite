@@ -1,0 +1,40 @@
+﻿
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        @Html.ActionLink("Movie site", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="navbar-collapse collapse" id="navbarColor01" style="">
+            <ul class="navbar-nav me-auto">
+                @{
+                    // Detect if the current page is the Home page and add the active class to the Home button
+                    var currentPage = HttpContext.Current.Request.Url.AbsolutePath;
+                    var homeClass = currentPage == "/" ? "active" : "";
+                    var aboutClass = currentPage == "/Home/About" ? "active" : "";
+                    var contactClass = currentPage == "/Home/Contact" ? "active" : "";
+                    var randomClass = currentPage == "/DataBase" ? "active" : "";
+                    var listClass = currentPage == "/DataBase/List" ? "active" : "";
+
+                }
+                
+                <li class="nav-item">
+                    <a class="nav-link @homeClass" href="@Url.Action("Index", "Home")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @aboutClass" href="@Url.Action("About", "Home")"> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @contactClass" href="@Url.Action("Contact", "Home")">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @randomClass" href="@Url.Action("Index", "DataBase")">Add to dataBase</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @listClass" href="@Url.Action("List", "DataBase")">DataBase items</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

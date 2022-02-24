@@ -1,0 +1,54 @@
+﻿@model MovieReview
+
+<script>
+    function Test() {
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/Database/SubmitClick"
+        // });
+    }
+</script>
+
+@using (Html.BeginForm("Submit", "DataBase", FormMethod.Post))
+{
+
+    @Html.AntiForgeryToken()
+    <div class="Left">
+        <div style="display: inline-grid">
+            <div style="height: 50px"></div>
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "MovieName", @id = "MovieName" })
+                <label for="MovieName">MovieName</label>
+            </div>
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(model => model.Rating, new { @class = "form-control", @placeholder = "Rating", @id = "Rating" })
+                <label for="Rating">Rating</label>
+            </div>
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = "Description", @id = "Description" })
+                <label for="Description">Description</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+    <div class="Right">
+    </div>
+}
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#MovieName").keyup(function () {
+                var movieName = $("#MovieName").val();
+                $.ajax({
+                    type: "POST",
+                    url: "/Database/Search",
+                    data: { movieName: movieName },
+                    success: function (data) {
+                        $(".Right").html(data);
+                    }
+                });
+            });
+        });
+    </script>
+}

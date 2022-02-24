@@ -1,0 +1,18 @@
+﻿.Left {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.Right {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+}
+
+/* https://bootswatch.com/darkly/?*/
+

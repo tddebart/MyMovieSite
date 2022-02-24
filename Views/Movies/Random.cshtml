@@ -1,0 +1,14 @@
+﻿@model RandomMovieViewModel
+
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@(Model.movie.Name)</h2>
+<ul>
+    @foreach (var customer in Model.customers)
+    {
+        <li>@(customer.Name)</li>
+    }
+</ul>
