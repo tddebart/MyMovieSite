@@ -9,7 +9,7 @@ namespace MyMovieSite.Controllers
         // GET: /Movies/Random
         public ActionResult Random()
         {
-            var movie = new Movie() { Name = "Shrek" };
+            // var movie = new Movie() { Name = "Shrek" };
             var customers = new List<Customer>
             {
                 new Customer { Name = "Customer 1" },
@@ -18,7 +18,7 @@ namespace MyMovieSite.Controllers
 
             var viewModel = new RandomMovieViewModel()
             {
-                movie = movie,
+                // movie = movie,
                 customers = customers
             };
             

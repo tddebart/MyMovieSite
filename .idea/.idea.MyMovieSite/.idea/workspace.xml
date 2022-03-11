@@ -11,49 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bad50ca-5f88-4d50-9832-1375148e4f75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/MyMovieSite/config/applicationhost.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/MyMovieSite/v16/.suo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/bootstrap-darkly.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/bootstrap-glyphicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controllers/DataBaseController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controllers/MoviesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Customer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Movie.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/MovieReview.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyMovieSite.csproj.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyMovieSite.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UpgradeLog.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ViewData.aspx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ViewData.aspx.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ViewModels/MoviesViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ViewModels/RandomMovieViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/DataBase/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/DataBase/List.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Home/Test.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Movies/Random.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Shared/_NavBar.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Start/BundleConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App_Start/BundleConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Start/FilterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App_Start/FilterConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Start/RouteConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App_Start/RouteConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Site.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Global.asax" beforeDir="false" afterPath="$PROJECT_DIR$/Global.asax" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Global.asax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Global.asax.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/API/APIMovie.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/DataBase/FullList.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/DataBase/MovieList.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Content/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/DataBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DataBaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/MoviesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MoviesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Movie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/MovieReview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/MovieReview.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyMovieSite.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyMovieSite.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/About.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/Error.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/_ViewStart.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/Web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViewModels/RandomMovieViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/RandomMovieViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/DataBase/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/DataBase/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/DataBase/List.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Movies/Random.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Movies/Random.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_NavBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_NavBar.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +58,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/a3/4b77d033/Number.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/22/79e67067/ReflectedActionDescriptor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -92,10 +68,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/a5/e44a5618/ActionMethodDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/27/bf79606e/MySqlCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/5c/12066ba5/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/c1/b7a53572/WebViewPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5d97019f7842404a9a9062a0f80fcae132678/da/07b95d09/WebPageBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/9d/89ba7dda/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/MoviesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/ef/0014181c/MySqlConnection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6fc0155e6fdd4c5eab3eafeef639933a32230/75/53ae8e28/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/bb/e97d15e3/ExceptionInterceptor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/5c/6d68e7b4/MySqlParameterCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/c1/b7a53572/WebViewPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5d97019f7842404a9a9062a0f80fcae132678/da/07b95d09/WebPageBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -165,8 +145,18 @@
       <workItem from="1644825632082" duration="15939000" />
       <workItem from="1645004822149" duration="119000" />
       <workItem from="1645005025607" duration="8183000" />
-      <workItem from="1645436686626" duration="21058000" />
+      <workItem from="1645436686626" duration="22992000" />
+      <workItem from="1646902618258" duration="107000" />
+      <workItem from="1646902866326" duration="26067000" />
     </task>
+    <task id="LOCAL-00001" summary="made the stuff">
+      <created>1645699432909</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645699432909</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +191,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="made the stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="made the stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -216,6 +208,12 @@
             <option name="internal" value="false" />
           </properties>
           <option name="timeStamp" value="20" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+          <properties exception="Google.Protobuf.InvalidJsonException" isInternal="false" displayValue="InvalidJsonException" namespaceName="Google.Protobuf">
+            <option name="internal" value="false" />
+          </properties>
+          <option name="timeStamp" value="25" />
         </breakpoint>
       </breakpoints>
       <default-breakpoints>
