@@ -11,11 +11,11 @@
                 <label for="MovieName">MovieName</label>
             </div>
             <div class="form-floating mb-3">
-                @Html.TextBoxFor(model => model.Rating, new { @class = "form-control", @placeholder = "Rating", @id = "Rating" })
-                <label for="Rating">Rating</label>
+                @Html.TextBoxFor(model => model.Rating, new { @class = "form-control", @autocomplete="off", @id = "Rating" })
+                <label for="Rating">Rating (1-5)</label>
             </div>
             <div class="form-floating mb-3">
-                @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = "Description", @id = "Description" })
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @height = "150px", @placeholder = "Description", @id = "Description" })
                 <label for="Description">Description</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -44,14 +44,11 @@
         input.keydown(function () {
             clearTimeout(typingTimer);
         });
-       
-        
-        
-        search();
 
         
         
         function doneTyping() {
+            movies = [];
             search();
         }
 
@@ -76,7 +73,7 @@
                                 "<div class='card'>" +
                                  "<div class='card-body'>" +
                                   "<h5 class='card-title'>" + response.result[i].title + "</h5>" +
-                                  "<img src='" + imageLink + "'>" +
+                                  "<img style='height:30vh; display:inline;' src='" + imageLink + "'>" +
                                    "</div>" +
                                     "</div>");
                             movies.push(response.result[i].title);
@@ -126,7 +123,7 @@
           });
           
           function onInput() {
-            var a, b, i, val = inp.value;
+            var a, b, i,v, val = inp.value;
             /*close any already open lists of autocompleted values*/
             closeAllLists();
             if (!val) { return false;}
@@ -140,24 +137,28 @@
             /*for each item in the array...*/
             for (i = 0; i < arr.length; i++) {
               /*check if the item starts with the same letters as the text field value:*/
-              if (arr[i].substr(0, val.length).toUpperCase() === val.toUpperCase()) {
-                /*create a DIV element for each matching element:*/
-                b = document.createElement("DIV");
-                b.setAttribute("class", "list-group-item d-flex align-items-center");
-                /*make the matching letters bold:*/
-                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                b.innerHTML += arr[i].substr(val.length);
-                /*insert a input field that will hold the current array item's value:*/
-                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                /*execute a function when someone clicks on the item value (DIV element):*/
-                    b.addEventListener("click", function(e) {
-                    /*insert the value for the autocomplete text field:*/
-                    inp.value = this.getElementsByTagName("input")[0].value;
-                    /*close the list of autocompleted values,
-                    (or any other open lists of autocompleted values:*/
-                    closeAllLists();
-                });
-                a.appendChild(b);
+              let split = val.split(' ');
+              for (v = 0; v < split.length; v++) {
+                  if (arr[i].toLowerCase().includes(split[v].toLowerCase())) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    b.setAttribute("class", "list-group-item d-flex align-items-center");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function(e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                    break;
+                  }
               }
             }
         }

@@ -19,8 +19,9 @@
 
 .dataBaseGrid {
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
+    margin-bottom: 300px;
     
 }
 
@@ -30,19 +31,16 @@
 }
 
 .card-img-top {
-    width:100px;
-    height:100px;
+    width:150px;
+    height:250px;
     float:left;
     margin-right:25px;
+    border-radius: calc(0.25rem - 1px);
 }
 
 .autocomplete-items {
-    position: absolute;
     z-index: 99;
     /*position the autocomplete items to be the same width as the container:*/
-    top: 100%;
-    left: 0;
-    right: 0;
 }
 
 .removeHyper {

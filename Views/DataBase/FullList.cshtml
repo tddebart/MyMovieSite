@@ -36,19 +36,30 @@
         
         @* https://api.themoviedb.org/3/search/movie?api_key=fae11d014542d194b478da188762d57f&query=batman *@
         
+        <form class="d-flex mb-4" method="get">
+            <input class="form-control me-sm-2" type="text" name="search" placeholder="Search" value="@Request.QueryString["search"]" >
+            <input class="btn btn-secondary my-2 my-sm-0" type="Submit" value="Search"/>
+        </form>
+
+
+
         <div class="dataBaseGrid">
             @foreach (var item in Model)
             {
-                <a class="card removeHyper" href="Reviews/@item.Name.GetHashCode()">
+                <a class="card removeHyper" href="Reviews/@item.Name.ToLower().GetHashCode()">
                     <div class="card-body">
-                        <img src="@Url.Content("https://via.placeholder.com/250/")" class="card-img-top">
+                        <img id="@item.Name" src="@Url.Content("https://image.tmdb.org/t/p/w440_and_h660_face" + @item.poster_path)" class="card-img-top">
                         <h4 class="card-title">@item.Name</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">@item.Reviews</h6>
-                        @* <p class="card-text">@item.Description</p> *@
+                        <h6 class="card-subtitle mb-2 text-muted">Reviews: @item.Reviews</h6>
+                        <p class="card-text">@item.overview</p>
                         @* <a href="#" class="card-link">Card link</a> *@
                         @* <a href="#" class="card-link">Another link</a> *@
                     </div>
                 </a>
+            }
+            @if (Model.Count() == 0)
+            {
+                <h3>No results found</h3>
             }
         </div>
     </div>

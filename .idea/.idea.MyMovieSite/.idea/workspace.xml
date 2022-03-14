@@ -11,23 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bad50ca-5f88-4d50-9832-1375148e4f75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/API/APIMovie.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/DataBase/FullList.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/DataBase/MovieList.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources/b8eadbb0-890e-4cd5-bbeb-04708e874342.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources/b8eadbb0-890e-4cd5-bbeb-04708e874342.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/git_toolbox_prj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Content/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/DataBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DataBaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/MoviesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/MoviesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/API/APIMovie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/API/APIMovie.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Movie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/MovieReview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/MovieReview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyMovieSite.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyMovieSite.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViewModels/RandomMovieViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/RandomMovieViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/DataBase/FullList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/DataBase/FullList.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/DataBase/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/DataBase/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/DataBase/List.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Movies/Random.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Movies/Random.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Shared/_NavBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_NavBar.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +67,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6fc0155e6fdd4c5eab3eafeef639933a32230/75/53ae8e28/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/bb/e97d15e3/ExceptionInterceptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/5c/6d68e7b4/MySqlParameterCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9fe360f19e6e4352b25c064e5dc883b4528d90/09/0227832f/AspNetSynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/c1/b7a53572/WebViewPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5d97019f7842404a9a9062a0f80fcae132678/da/07b95d09/WebPageBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -147,7 +141,8 @@
       <workItem from="1645005025607" duration="8183000" />
       <workItem from="1645436686626" duration="22992000" />
       <workItem from="1646902618258" duration="107000" />
-      <workItem from="1646902866326" duration="26067000" />
+      <workItem from="1646902866326" duration="30637000" />
+      <workItem from="1647245864383" duration="8482000" />
     </task>
     <task id="LOCAL-00001" summary="made the stuff">
       <created>1645699432909</created>
@@ -156,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645699432909</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="made shit">
+      <created>1647000715534</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647000715534</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +194,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="made the stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the stuff" />
+    <MESSAGE value="made shit" />
+    <option name="LAST_COMMIT_MESSAGE" value="made shit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
