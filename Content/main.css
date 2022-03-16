@@ -7,6 +7,8 @@
     float: right;
     width: 50%;
     height: 100%;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .body-content {
     padding-left: 15px;

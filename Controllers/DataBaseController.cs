@@ -23,13 +23,14 @@ namespace MyMovieSite.Controllers
         List<MovieReview> reviews = new List<MovieReview>();
         
         [HttpGet]
+        [Route("Submit")]
         public ActionResult Index()
         {
             return View();
         }
         
         [HttpGet]
-        [Route("DataBase/Reviews/")]
+        [Route("Reviews/")]
         public async Task<ActionResult> FullList()
         {
             IEnumerable<Movie> movies;
@@ -45,7 +46,7 @@ namespace MyMovieSite.Controllers
         }
 
         [HttpGet]
-        [Route("DataBase/Reviews/{hashCode}")]
+        [Route("Reviews/{hashCode}")]
         public ActionResult MovieList(int hashCode)
         {
             GetDataBase();
@@ -53,7 +54,7 @@ namespace MyMovieSite.Controllers
                 .ToList();
             if (myReviews.Count == 0)
             {
-                return new RedirectResult("/DataBase/Reviews");
+                return new RedirectResult("/Reviews");
             }
             else
             {
@@ -83,7 +84,7 @@ namespace MyMovieSite.Controllers
 
             await SubmitClick(model);
             
-            return new RedirectResult("/DataBase/Index");
+            return new RedirectResult("/Submit/?success=true");
         }
 
         public FormCollection formCollection;
@@ -102,12 +103,12 @@ namespace MyMovieSite.Controllers
             var cmd = conn.CreateCommand();
             if (searchString != "")
             {
-                cmd.CommandText = "SELECT DISTINCT MovieName FROM ratings WHERE MovieName LIKE @searchString";
+                cmd.CommandText = "SELECT DISTINCT MovieName FROM ratings WHERE MovieName LIKE @searchString ORDER BY MovieName";
                 cmd.Parameters.AddWithValue("@searchString", "%" + searchString + "%");
             }
             else
             {
-                cmd.CommandText = "SELECT DISTINCT MovieName FROM ratings";
+                cmd.CommandText = "SELECT DISTINCT MovieName FROM ratings ORDER BY MovieName";
             }
             
             var reader = cmd.ExecuteReader();
@@ -200,6 +201,10 @@ namespace MyMovieSite.Controllers
             return reviews;
         }
         
+        //TODO: unit tests doen
+        // lezen wat messagequeue zijn
+        
+        
         [HttpPost]
         public async Task<ActionResult> Search(string searchString)
         {
@@ -251,12 +256,16 @@ namespace MyMovieSite.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://api.themoviedb.org/");
+                model.Name = model.Name.Remove(model.Name.Length-7, 7);
                 var response = await client.GetAsync($"3/search/movie?api_key=fae11d014542d194b478da188762d57f&include_adult=false&query={model.Name}");
                 response.EnsureSuccessStatusCode();
                 var stringResult = await response.Content.ReadAsStringAsync();
                 var result = JsonConvert.DeserializeObject<ApiMovieResponse>(stringResult);
                 // return Json(new { success = true, result = result.results });
-                model.poster_path = result.results[0].poster_path;
+                if (result.results.Length > 0)
+                {
+                    model.poster_path = result.results[0].poster_path;
+                }
             }
             
             

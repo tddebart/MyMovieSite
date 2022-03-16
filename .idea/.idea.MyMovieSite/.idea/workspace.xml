@@ -10,17 +10,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bad50ca-5f88-4d50-9832-1375148e4f75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources/b8eadbb0-890e-4cd5-bbeb-04708e874342.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/dataSources/b8eadbb0-890e-4cd5-bbeb-04708e874342.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/git_toolbox_prj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/git_toolbox_prj.xml" afterDir="false" />
+    <list default="true" id="1bad50ca-5f88-4d50-9832-1375148e4f75" name="Changes" comment="api things">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyMovieSite/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Content/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/DataBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DataBaseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/API/APIMovie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/API/APIMovie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Movie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/DataBase/FullList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/DataBase/FullList.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyMovieSite.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyMovieSite.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViewModels/MoviesViewModel.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/DataBase/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/DataBase/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_NavBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_NavBar.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +57,17 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9fe360f19e6e4352b25c064e5dc883b4528d90/57/95d540d0/HttpServerUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/a5/e44a5618/ActionMethodDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/27/bf79606e/MySqlCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tddeb/Desktop/Software developer/MyMovieSite/Views/DataBase/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tddeb/Desktop/Software developer/MyMovieSite/Models/API/APIMovie.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/5c/12066ba5/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/9d/89ba7dda/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/MoviesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/f6/7b28c42b/DirectRouteFactoryContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/ef/0014181c/MySqlConnection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6fc0155e6fdd4c5eab3eafeef639933a32230/75/53ae8e28/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/bb/e97d15e3/ExceptionInterceptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c610ea3776854f66b83d2a846ac21d141a7800/5c/6d68e7b4/MySqlParameterCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tddeb/Desktop/Software developer/MyMovieSite/Controllers/DataBaseController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9fe360f19e6e4352b25c064e5dc883b4528d90/09/0227832f/AspNetSynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03c98cfc8623445a8db7b66c6ffa5def85db8/c1/b7a53572/WebViewPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5d97019f7842404a9a9062a0f80fcae132678/da/07b95d09/WebPageBase.cs" root0="SKIP_HIGHLIGHTING" />
@@ -142,7 +143,7 @@
       <workItem from="1645436686626" duration="22992000" />
       <workItem from="1646902618258" duration="107000" />
       <workItem from="1646902866326" duration="30637000" />
-      <workItem from="1647245864383" duration="8482000" />
+      <workItem from="1647245864383" duration="24468000" />
     </task>
     <task id="LOCAL-00001" summary="made the stuff">
       <created>1645699432909</created>
@@ -158,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647000715534</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="api things">
+      <created>1647255034444</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647255034444</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +203,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="made the stuff" />
     <MESSAGE value="made shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="made shit" />
+    <MESSAGE value="api things" />
+    <option name="LAST_COMMIT_MESSAGE" value="api things" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

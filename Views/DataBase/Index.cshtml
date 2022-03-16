@@ -4,21 +4,31 @@
 {
     @Html.AntiForgeryToken()
     <div class="Left">
+        @if (Request.QueryString["success"] == "true")
+        {
+            <div id="alert" class="alert alert-dismissible alert-success">
+                <button id="dismiss" type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Well done!</strong> You successfully left a review.
+            </div>
+        }
+        
+        
         <div style="display: inline-grid">
             <div style="height: 50px"></div>
             <div class="form-floating mb-3">
-                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @autocomplete="off", @id = "MovieName" })
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @autocomplete = "off", @id = "MovieName" })
                 <label for="MovieName">MovieName</label>
             </div>
             <div class="form-floating mb-3">
-                @Html.TextBoxFor(model => model.Rating, new { @class = "form-control", @autocomplete="off", @id = "Rating" })
+                @Html.TextBoxFor(model => model.Rating, new { @class = "form-control", @autocomplete = "off", @id = "Rating" })
                 <label for="Rating">Rating (1-5)</label>
             </div>
             <div class="form-floating mb-3">
-                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @height = "150px", @placeholder = "Description", @id = "Description" })
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @style = "height: 150px", @placeholder = "Description", @id = "Description" })
                 <label for="Description">Description</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="text-danger" id="info-text"></div>
+            <button id="Submit" type="submit" class="btn btn-primary disabled">Submit</button>
         </div>
     </div>
     <div class="Right">
@@ -30,19 +40,63 @@
     <script>
         var typingTimer;
         var doneTypingInterval = 600;
-        var input = $("#MovieName");
+        var movieName = $("#MovieName");
+        var rating = $("#Rating");
+        var description = $("#Description");
+        var infoText = $("#info-text");
+        
+        let validMovieName = false;
         
         var movies = [];
         
+        var infoTextText = "";
+        
+        var activate = false;
+        
+        
+        $("#dismiss").click(function () {
+            $("#alert").hide();
+        });
+        
+        movieName[0].addEventListener("input", updateInfoText)
+        rating[0].addEventListener("input", updateInfoText)
+        
+        function updateInfoText() {
+            if (!activate) {
+                activate = true;
+                return; 
+            }
+            infoTextText = "";
+            if (!validMovieName) {
+                infoTextText += "Specify a movie name<br>";
+                $("#Submit").addClass("disabled");
+            }
+            
+            if (parseInt(rating.val()) < 1 || parseInt(rating.val()) > 5 || isNaN(rating.val()) || rating.val() === "") {
+                infoTextText += "Rating must be between 1 and 5";
+                $("#Submit").addClass("disabled");
+            }
+            
+            if (validMovieName && parseInt(rating.val()) >= 1 && parseInt(rating.val()) <= 5) {
+                $("#Submit").removeClass("disabled");
+            }
+            
+            infoText.html(infoTextText);
+        }
+        
      
        
-        input.keyup(function () {
-            clearTimeout(typingTimer);
-            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        movieName.keyup(function (event) {
+            if (event.keyCode !== 27) {
+                clearTimeout(typingTimer);
+                typingTimer = setTimeout(doneTyping, doneTypingInterval);
+            }
         });
        
-        input.keydown(function () {
-            clearTimeout(typingTimer);
+        movieName.keydown(function (event) {
+            if (event.keyCode == 27) {
+                clearTimeout(typingTimer);
+            }
         });
 
         
@@ -53,11 +107,11 @@
         }
 
         function search() {
-            var movieName = input.val();
+            var movieText = movieName.val();
             $.ajax({
                 type: "POST",
                 url: "/Database/Search",
-                data: { searchString: movieName },
+                data: { searchString: movieText },
                 dataType: "json",
                 success: function (response) {
                     if (response.success) {
@@ -69,17 +123,18 @@
                         // }
                         for (let i = 0; i < response.result.length; i++) {
                             var imageLink = "https://www.themoviedb.org/t/p/w440_and_h660_face" + response.result[i].poster_path;
+                            var movieNameString = response.result[i].title + " (" + response.result[i].release_date.slice(0,4) + ")";
                             $(".Right").append("" +
-                                "<div class='card'>" +
+                               "<div class='card'>" +
                                  "<div class='card-body'>" +
-                                  "<h5 class='card-title'>" + response.result[i].title + "</h5>" +
+                                  "<h5 class='card-title'>" + movieNameString + "</h5>" +
                                   "<img style='height:30vh; display:inline;' src='" + imageLink + "'>" +
                                    "</div>" +
                                     "</div>");
-                            movies.push(response.result[i].title);
+                            movies.push(movieNameString);
                         }
                         
-                        autocomplete(input[0], movies);
+                        autocomplete(movieName[0], movies);
                     }
                 },
                 error: function (xhr, status, error) {
@@ -92,6 +147,7 @@
         function autocomplete(inp, arr) {
           /*the autocomplete function takes two arguments,
           the text field element and an array of possible autocompleted values:*/
+          console.log("onInput");   
           var currentFocus;
           /*execute a function when someone writes in the text field:*/
           inp.addEventListener("input", onInput);
@@ -124,6 +180,8 @@
           
           function onInput() {
             var a, b, i,v, val = inp.value;
+            validMovieName = false;
+            updateInfoText()
             /*close any already open lists of autocompleted values*/
             closeAllLists();
             if (!val) { return false;}
@@ -155,6 +213,11 @@
                         /*close the list of autocompleted values,
                         (or any other open lists of autocompleted values:*/
                         closeAllLists();
+                        
+                        validMovieName = true;
+                        updateInfoText()
+                       
+                        
                     });
                     a.appendChild(b);
                     break;
@@ -179,7 +242,8 @@
               x[i].classList.remove("autocomplete-active");
             }
           }
-          function closeAllLists(elmnt) {
+         
+        function closeAllLists(elmnt) {
             /*close all autocomplete lists in the document,
             except the one passed as an argument:*/
             var x = document.getElementsByClassName("autocomplete-items");
@@ -190,11 +254,20 @@
           }
         }
         /*execute a function when someone clicks in the document:*/
-        document.addEventListener("click", function (e) {
+        document.body.addEventListener("click", function (e) {
             closeAllLists(e.target);
         });
-        onInput();
+        $(document).keydown(function(event) {
+            // If escape was pressed
+            if (event.keyCode == 27) {
+                document.body.click();
+            }
+            });
+
+        onInput()
         }
+        
+        autocomplete(movieName[0], movies);
         
      
         

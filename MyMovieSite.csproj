@@ -308,7 +308,6 @@
           <SubType>ASPXCodeBehind</SubType>
           <DependentUpon>ViewData.aspx</DependentUpon>
         </Compile>
-        <Compile Include="ViewModels\MoviesViewModel.cs" />
         <Compile Include="ViewModels\RandomMovieViewModel.cs" />
     </ItemGroup>
     <ItemGroup>
